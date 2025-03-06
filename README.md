@@ -125,10 +125,9 @@ Multi-modal object ReID leverages complementary data from diverse modalities (e.
 
 ### Training
 ```bash
-#!/bin/bash
-# python = 3.10.13
-# cuda = 11.8
-source activate (your_env)
+conda create -n MambaPro python=3.10.13
+conda activate MambaPro
+pip install torch==2.1.1+cu118 torchvision==0.16.1+cu118 torchaudio==2.1.1+cu118 --index-url https://download.pytorch.org/whl/cu118
 cd (your_path)
 pip install -r requirements.txt
 python train_net.py --config_file configs/RGBNT201/MambaPro.yml
